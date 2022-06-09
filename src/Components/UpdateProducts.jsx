@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import agent from "../agent";
-import { Product } from "../Models/product";
 
 function UpdateProduct() {
   const inputvalues = { 
@@ -16,7 +15,7 @@ function UpdateProduct() {
   const { id } = useParams();
   const [product, setProduct] = useState(inputvalues);
   const navigate = useNavigate();
-  
+
   useEffect(() => {
     agent.ProductList.details(parseInt(id)).then((response) =>
       setProduct(response)
