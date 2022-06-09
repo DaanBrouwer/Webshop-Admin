@@ -14,6 +14,7 @@ const request = {
 
 const ProductList = {
     list: () => request.get('products'),
+    details: (id: number) => request.get(`products/${id}`),
     removeItem: (productId : number) => request.delete(`productId=${productId}`),
     updateProduct: (product : Product) => request.put(``,{}),
     addProduct: (product : Product) => request.post(``,{}),
