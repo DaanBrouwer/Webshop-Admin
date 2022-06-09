@@ -40,4 +40,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/webshopapp:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/webshopapp:admin
